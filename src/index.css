@@ -1,3 +1,40 @@
+/* Coolors Exported Palette - https://coolors.co/000022-001242-0094c6-005e7c-040f16 */
+
+/* CSS HEX Variables */
+:root {
+  --oxford-blue: #000022ff;
+  --penn-blue: #001242ff;
+  --blue-ncs: #0094c6ff;
+  --lapis-lazuli: #005e7cff;
+  --rich-black: #040f16ff;
+
+  /* CSS HSL Variables */
+  --oxford-blue-hsl: hsla(240, 100%, 7%, 1);
+  --penn-blue-hsl: hsla(224, 100%, 13%, 1);
+  --blue-ncs-hsl: hsla(195, 100%, 39%, 1);
+  --lapis-lazuli-hsl: hsla(195, 100%, 24%, 1);
+  --rich-black-hsl: hsla(203, 69%, 5%, 1);
+}
+
+/* Gradient Examples */
+.gradient-top {
+  background: linear-gradient(0deg, var(--oxford-blue), var(--penn-blue), var(--blue-ncs), var(--lapis-lazuli), var(--rich-black));
+}
+
+.gradient-right {
+  background: linear-gradient(90deg, var(--oxford-blue), var(--penn-blue), var(--blue-ncs), var(--lapis-lazuli), var(--rich-black));
+}
+
+.gradient-bottom {
+  background: linear-gradient(180deg, var(--oxford-blue), var(--penn-blue), var(--blue-ncs), var(--lapis-lazuli), var(--rich-black));
+}
+
+.gradient-left {
+  background: linear-gradient(270deg, var(--oxford-blue), var(--penn-blue), var(--blue-ncs), var(--lapis-lazuli), var(--rich-black));
+}
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
