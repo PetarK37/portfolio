@@ -2,7 +2,7 @@ import Navbar from "./components/layout/Navbar"
 
 function App() {
   return (
-    <div className="flex w-full h-full gap-5 align-middle justify-center">
+    <div className="flex w-full h-full gap-5 align-middle justify-center text-center">
       {/* Temp div until i create sections */}
       <div className="ml-auto flex align-middle justify-center flex-col">
         <h1>Coming <span className='soon'>soon</span></h1>
