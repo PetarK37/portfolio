@@ -12,6 +12,9 @@ export default {
         background: 'var(--color-background)',
         text: 'var(--color-text)',
       },
+      transitionProperty: {
+        bg: 'background-color'
+      },
     },
   },
   plugins: [],

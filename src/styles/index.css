@@ -47,10 +47,9 @@ body {
   width: 100%;
   background-color: var(--color-background);
   color: var(--color-text);
-  transition: all 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 
 }
-
 
 h1 {
   font-size: 3.2em;
