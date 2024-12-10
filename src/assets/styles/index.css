@@ -19,6 +19,7 @@
   --color-secondary: #005e7cff;
   --color-background: #ffffff;
   --color-text: #040f16ff;
+  --color-text-secondary: #888;
 
   color-scheme: light dark;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -51,26 +52,8 @@ body {
 
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
 
 #root {
   height: 100%;
   width: 100%;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.soon {
-  color: var(--color-primary);
 }

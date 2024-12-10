@@ -11,6 +11,7 @@ export default {
         secondary: 'var(--color-secondary)',
         background: 'var(--color-background)',
         text: 'var(--color-text)',
+        text_secondary: 'var(--color-text-secondary)'
       },
       transitionProperty: {
         bg: 'background-color'
