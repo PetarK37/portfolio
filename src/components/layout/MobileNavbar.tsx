@@ -11,6 +11,8 @@ function MobileNavbar() {
             <button
                 onClick={() => setIsOpen(true)}
                 className="p-2 focus:outline-none focus:ring"
+                role="menu"
+                aria-label="open menu"
             >
                 <svg
                     className="w-8 h-8"

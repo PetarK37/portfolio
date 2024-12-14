@@ -1,14 +1,24 @@
-import PetarImage from "../../assets/images/PetarK.png";
+import PetarImage from "../../assets/images/PetarK.webp";
+import { TypeAnimation } from 'react-type-animation';
 
+
+//TODO some text animations
 function HeroSection() {
     return (
         <div className="flex items-center gap-4 justify-center lg:px-16 px-8 max-h-full lg:max-h-[800px] max-w-[1200px]">
             <div className="flex-col flex items-center  w-auto gap-2">
                 <div className="pb-6">
-                    <h1 className="h-fit text-left text-7xl font-bold">
-                        Hello, <br className="hidden lg:block" /> my name is{" "}
-                        <span className="text-primary">Petar</span>
-                    </h1>
+                    <h1 className="h-fit text-left text-7xl font-bold">Hello, my name is</h1>
+                    <TypeAnimation
+                        style={{ whiteSpace: 'pre-line' }}
+                        sequence={[
+                            'Petar',
+                        ]}
+                        speed={10}
+                        repeat={0}
+                        className="h-fit text-left text-7xl font-bold text-primary"
+                        wrapper="h1"
+                    />
                 </div>
                 <p className="text-left text-xl w-full font-semibold text-text_secondary">
                     This site is currently under a development.{" "}
