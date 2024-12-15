@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   assetsInclude: ['**/*.png', '**/*.PNG'],
+  server: {
+    host: '0.0.0.0',
+  },
 })

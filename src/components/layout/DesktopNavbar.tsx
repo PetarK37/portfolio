@@ -10,7 +10,7 @@ interface Position {
 }
 
 function DesktopNavbar() {
-    const [activeSection, setActiveSection] = useState("hero");
+    const [activeSection, setActiveSection] = useState("none");
     const [position, setPosition] = useState<Position>({
         top: 0,
         height: 0,
@@ -22,7 +22,10 @@ function DesktopNavbar() {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         setActiveSection(entry.target.id);
+                        return;
                     }
+                    setActiveSection("none");
+                    setPosition({ top: 0, height: 0 });
                 });
             },
             {

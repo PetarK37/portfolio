@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
@@ -7,6 +7,32 @@ import { NAV_ITEMS } from "../../utils/Constants";
 function MobileNavbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [activeSection, setActiveSection] = useState("hero");
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                        return;
+                    }
+                    setActiveSection("none");
+                });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+
+        NAV_ITEMS.forEach((item) => {
+            const element = document.getElementById(item.id);
+            if (element) {
+                observer.observe(element);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="relative flex justify-end px-2">
@@ -93,6 +119,7 @@ function MobileNavbar() {
                                                 spy={true}
                                                 onClick={() => {
                                                     setActiveSection(item.id);
+                                                    setIsOpen(false);
                                                 }}
                                             >
                                                 {item.label}

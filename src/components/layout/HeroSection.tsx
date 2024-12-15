@@ -15,7 +15,7 @@ function HeroSection() {
                     <TypeAnimation
                         style={{ whiteSpace: "pre-line" }}
                         sequence={["Petar"]}
-                        speed={1}
+                        speed={{ type: "keyStrokeDelayInMs", value: 200 }}
                         repeat={0}
                         className="h-fit text-left text-7xl font-bold text-primary"
                         wrapper="h1"
