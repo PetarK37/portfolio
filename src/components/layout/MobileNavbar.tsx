@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "../ui/ThemeToggle";
+import { Link } from "react-scroll";
+import { NAV_ITEMS } from "../../utils/Constants";
 
 function MobileNavbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [activeSection, setActiveSection] = useState("hero");
 
     return (
         <div className="relative flex justify-end px-2">
@@ -25,11 +28,7 @@ function MobileNavbar() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d={
-                            isOpen
-                                ? "M6 18L18 6M6 6l12 12"
-                                : "M4 6h16M4 12h16M4 18h16"
-                        }
+                        d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                     ></path>
                 </svg>
             </button>
@@ -44,7 +43,7 @@ function MobileNavbar() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-20"
+                            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-200"
                         ></motion.div>
 
                         {/* Drawer Content */}
@@ -53,7 +52,7 @@ function MobileNavbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "tween", duration: 0.3 }}
-                            className="fixed top-0 right-0 h-full w-3/4 bg-background shadow-lg z-30 flex flex-col p-6 transition-bg duration-500"
+                            className="fixed top-0 right-0 h-full w-3/4 bg-background shadow-lg z-300 flex flex-col p-6 transition-bg duration-500"
                         >
                             <div className="pb-16 flex justify-between">
                                 <ThemeToggle />
@@ -79,10 +78,30 @@ function MobileNavbar() {
                                 </button>
                             </div>
                             <div className="flex h-full flex-col space-y-4 self-start justify-start">
-
+                                <ul className="mb-auto text-xl px-3 uppercase font-semibold tracking-widest flex flex-col gap-3 justify-start text-left">
+                                    {NAV_ITEMS.map((item) => (
+                                        <li
+                                            className={`hover:text-primary cursor-pointer ${activeSection === item.id ? "text-primary" : ""
+                                                }`}
+                                            key={item.id}
+                                        >
+                                            <Link
+                                                to={item.id}
+                                                smooth={true}
+                                                duration={500}
+                                                offset={item.offset}
+                                                spy={true}
+                                                onClick={() => {
+                                                    setActiveSection(item.id);
+                                                }}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <div className="self-end">
-                            </div>
+                            <div className="self-end"></div>
                         </motion.div>
                     </div>
                 )}
@@ -91,4 +110,4 @@ function MobileNavbar() {
     );
 }
 
-export default MobileNavbar
+export default MobileNavbar;
