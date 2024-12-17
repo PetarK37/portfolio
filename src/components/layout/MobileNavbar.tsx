@@ -3,10 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
 import { NAV_ITEMS } from "../../utils/Constants";
+import { useActiveSection } from "../../hooks/UseActiveSection";
 
 function MobileNavbar() {
+    const { activeSection, setActiveSection } = useActiveSection();
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [activeSection, setActiveSection] = useState("hero");
 
     useEffect(() => {
         const observer = new IntersectionObserver(

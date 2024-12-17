@@ -1,20 +1,13 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { NAV_ITEMS } from "../../utils/Constants";
-
-interface Position {
-    top: number;
-    height: number;
-}
+import { useActiveSection } from "../../hooks/UseActiveSection";
 
 function DesktopNavbar() {
-    const [activeSection, setActiveSection] = useState("none");
-    const [position, setPosition] = useState<Position>({
-        top: 0,
-        height: 0,
-    });
+    const { activeSection, setActiveSection, position, setPosition } =
+        useActiveSection();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
