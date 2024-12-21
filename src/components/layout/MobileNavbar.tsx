@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
-import { NAV_ITEMS } from "../../utils/Constants";
+import { NAV_ITEMS } from "../../utils/constants";
 import { useActiveSection } from "../../hooks/UseActiveSection";
 
 function MobileNavbar() {

@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { NAV_ITEMS } from "../../utils/Constants";
+import { NAV_ITEMS } from "../../utils/constants";
 import { useActiveSection } from "../../hooks/UseActiveSection";
 
 function DesktopNavbar() {
@@ -14,9 +14,11 @@ function DesktopNavbar() {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        // console.log(`Intersecting: ${entry.target.id}`);
                         setActiveSection(entry.target.id);
                         return;
                     }
+                    // console.log(`NOT Intersecting: ${entry.target.id}`);
                     setActiveSection("none");
                     setPosition({ top: 0, height: 0 });
                 });

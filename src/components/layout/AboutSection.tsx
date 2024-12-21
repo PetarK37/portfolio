@@ -1,11 +1,13 @@
 import { useRef } from "react";
 import { useIsVisible } from "../../hooks/UseIsVisible";
+import { useTheme } from "../../context/ThemeContext";
 
 function AboutSection() {
     const topRef = useRef<HTMLElement>();
     const isTopVisible = useIsVisible(topRef);
     const bottomRef = useRef<HTMLElement>();
     const isBottomVisible = useIsVisible(bottomRef);
+    const { theme } = useTheme();
 
     return (
         <section
@@ -55,12 +57,12 @@ function AboutSection() {
                             }`}
                         ref={bottomRef}
                     >
-                        <h2 className="h-fit text-left text-4xl font-bold text-center">
+                        <h2 className="h-fit text-4xl font-bold text-center">
                             What's My Education?
                         </h2>
                         <div className="flex flex-col sm:flex-row justify-start align-middle py-6 text-xl">
                             <a
-                                className="sm:w-[30%] hover:bg-primary bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle"
+                                className={`sm:w-[30%] hover:bg-primary ${theme === 'dark' ? 'bg-white' : 'bg-black'} ${theme === 'dark' ? '' : 'hover:text-white'}  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle`}
                                 href="https://nikolatesla.edu.rs/"
                                 target="_blank"
                             >
@@ -90,9 +92,9 @@ function AboutSection() {
                                     </p>
                                 </div>
                             </a>
-                            <div className="sm:w-[10%] w-1 sm:h-1 h-[50px] bg-gray-300 sm:my-auto sm:mx-2 mx-auto my-2 bg-opacity-40" />
+                            <div className={`sm:w-[10%] w-1 sm:h-1 h-[50px] ${theme === 'dark' ? 'bg-gray-300' : 'bg-black'} sm:my-auto sm:mx-2 mx-auto my-2 bg-opacity-40`} />
                             <a
-                                className="sm:w-[30%] hover:bg-primary bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle"
+                                className={`sm:w-[30%] hover:bg-primary ${theme === 'dark' ? 'bg-white' : 'bg-black'}  ${theme === 'dark' ? '' : 'hover:text-white'} rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle`}
                                 href="https://www.tehskolasabac.edu.rs/index.php/obrazovniprofilimain/86-obrazovniprofili/elektrotehnika/elprocesngupr/77-elekprocupr"
                                 target="_blank"
                             >
@@ -122,9 +124,9 @@ function AboutSection() {
                                     </p>
                                 </div>
                             </a>
-                            <div className="sm:w-[10%] w-1 sm:h-1 h-[50px] bg-gray-300 sm:my-auto sm:mx-2 mx-auto my-2 bg-opacity-40" />
+                            <div className={`sm:w-[10%] w-1 sm:h-1 h-[50px] ${theme === 'dark' ? 'bg-gray-300' : 'bg-black'} sm:my-auto sm:mx-2 mx-auto my-2 bg-opacity-40`} />
                             <a
-                                className="sm:w-[30%] hover:bg-primary bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle"
+                                className={`sm:w-[30%] hover:bg-primary ${theme === 'dark' ? 'bg-white' : 'bg-black'} ${theme === 'dark' ? '' : 'hover:text-white'} rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 p-5 flex flex-col gap-4 justify-center align-middle`}
                                 href="https://ftn.uns.ac.rs/akreditacija-2020/SI0/2/1"
                                 target="_blank"
                             >
