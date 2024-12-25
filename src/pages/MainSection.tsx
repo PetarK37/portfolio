@@ -1,4 +1,5 @@
 import AboutSection from "../components/layout/AboutSection";
+import ExperienceSection from "../components/layout/ExperienceSectionc";
 import HeroSection from "../components/layout/HeroSection";
 import SkillsSection from "../components/layout/SkillsSection";
 
@@ -8,6 +9,7 @@ function MainSection() {
             <HeroSection />
             <AboutSection />
             <SkillsSection />
+            <ExperienceSection />
         </div>
     );
 }

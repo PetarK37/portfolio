@@ -17,7 +17,12 @@ function SkillsSection() {
                     }`}
                 ref={ref}
             >
-                <h2 className="h-fit text-center text-4xl font-bold">My skills</h2>
+                <div>
+                    <h2 className="h-fit text-center text-4xl font-bold">My skills</h2>
+                    <p className="mt-2 text-lg w-full font-semibold text-text_secondary">
+                        Here is the list of technologies i've worked with the most
+                    </p>
+                </div>
                 <div className="flex gap-3 align-middle justify-center flex-wrap mx-auto">
                     {shuffleArray(SKILLS).map((s) => (
                         <div
