@@ -3,7 +3,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { NAV_ITEMS } from "../../utils/constants";
-import { useActiveSection } from "../../hooks/UseActiveSection";
+import { Position, useActiveSection } from "../../hooks/UseActiveSection";
 
 function DesktopNavbar() {
     const { activeSection, setActiveSection, position, setPosition } =
@@ -78,7 +78,7 @@ interface NavTabProps {
 }
 
 const Tab = ({ children, setPosition, active }: NavTabProps) => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
         if (active) {
             if (!ref?.current) return;

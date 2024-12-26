@@ -3,9 +3,9 @@ import { useIsVisible } from "../../hooks/UseIsVisible";
 import { useTheme } from "../../context/ThemeContext";
 
 function AboutSection() {
-    const topRef = useRef<HTMLElement>();
+    const topRef = useRef<HTMLDivElement | null>(null);
     const isTopVisible = useIsVisible(topRef);
-    const bottomRef = useRef<HTMLElement>();
+    const bottomRef = useRef<HTMLDivElement | null>(null);
     const isBottomVisible = useIsVisible(bottomRef);
     const { theme } = useTheme();
 

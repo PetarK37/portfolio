@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import DesktopNavbar from "./components/layout/DesktopNavbar";
 import MobileNavbar from "./components/layout/MobileNavbar";
 import MainSection from "./pages/MainSection";
@@ -13,11 +13,11 @@ import { loadSlim } from "@tsparticles/slim";
 import { useTheme } from "./context/ThemeContext";
 
 function App() {
-  const navbarRef = useRef(null); // Ref for the DesktopNavbar
+  const navbarRef = useRef<HTMLDivElement>(null);
   const [navbarWidth, setNavbarWidth] = useState(0); // State to store navbar width
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [init, setInit] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     // Dynamically calculate and update navbar width

@@ -5,7 +5,7 @@ import { shuffleArray } from "../../utils/helper";
 import { Tooltip } from "react-tooltip";
 
 function SkillsSection() {
-    const ref = useRef<HTMLElement>();
+    const ref = useRef<HTMLDivElement>(null);
     const isVisible = useIsVisible(ref);
     return (
         <section

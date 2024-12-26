@@ -4,7 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import illustration from '../../assets/images/undraw_programming_65t2.svg'
 
 function ProjectsSection() {
-    const ref = useRef<HTMLElement>();
+    const ref = useRef<HTMLDivElement>(null);
     const isVisible = useIsVisible(ref);
 
     return (

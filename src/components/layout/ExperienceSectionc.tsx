@@ -7,7 +7,7 @@ import zenithLogo from '../../assets/images/ZenithChatLogo.png'
 import 'react-vertical-timeline-component/style.min.css';
 
 function ExperienceSection() {
-    const ref = useRef<HTMLElement>();
+    const ref = useRef<HTMLDivElement>(null);
     const isVisible = useIsVisible(ref);
 
     return (

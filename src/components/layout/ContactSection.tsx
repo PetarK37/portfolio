@@ -4,7 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { Icon } from "@iconify/react";
 
 function ContactSection() {
-    const ref = useRef<HTMLElement>();
+    const ref = useRef<HTMLDivElement>(null);
     const isVisible = useIsVisible(ref);
 
     return (
