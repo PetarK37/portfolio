@@ -22,7 +22,7 @@ function HeroSection() {
                     />
                     <p className="mt-4 text-left text-xl w-full font-semibold text-text_secondary lg:max-w-[70%]">
                         Full-stack developer, passionate about leveraging{" "}
-                        <span className="font-extrabold"> AI</span> to to simplify and
+                        <span className="font-extrabold"> AI</span> to simplify and
                         automate everyday tasks.
                     </p>
                 </div>
