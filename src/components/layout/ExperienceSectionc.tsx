@@ -27,7 +27,7 @@ function ExperienceSection() {
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: 'hsl(0, 0%, 0%, 0)', boxShadow: 'none' }}
-                            date="Jan 2024 - Present"
+                            date="Jan 2024 - Aug 2025"
                             iconStyle={{ overflow: 'hidden', borderColor: 'var(--color-text)' }}
                             contentArrowStyle={{ display: 'none' }}
                             icon={<img src={zenithLogo} style={{ objectFit: 'cover' }} />}
