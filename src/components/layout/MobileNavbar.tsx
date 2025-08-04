@@ -4,6 +4,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 import { Link } from "react-scroll";
 import { NAV_ITEMS } from "../../utils/constants";
 import { useActiveSection } from "../../hooks/UseActiveSection";
+import DownloadButton from "../ui/DownloadButton";
 
 function MobileNavbar() {
     const { activeSection, setActiveSection } = useActiveSection();
@@ -129,7 +130,9 @@ function MobileNavbar() {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="self-end"></div>
+                            <div className="self-end w-full">
+                                <DownloadButton />
+                            </div>
                         </motion.div>
                     </div>
                 )}

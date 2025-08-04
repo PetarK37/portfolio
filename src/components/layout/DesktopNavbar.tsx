@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { NAV_ITEMS } from "../../utils/constants";
 import { Position, useActiveSection } from "../../hooks/UseActiveSection";
+import DownloadButton from "../ui/DownloadButton";
 
 function DesktopNavbar() {
     const { activeSection, setActiveSection, position, setPosition } =
@@ -67,6 +68,7 @@ function DesktopNavbar() {
                 ))}
                 <Cursor position={position} />
             </ul>
+            <DownloadButton />
         </div>
     );
 }

@@ -1,6 +1,7 @@
-function TopRowSection() {
+
+function DownloadButton() {
     return (
-        <div className='flex w-full px-8 py-4 mb-5'>
+        <div className='py-4 w-full flex'>
             <button className='bg-background border-2 border-text p-2 rounded-lg font-bold hover:bg-primary hover:border-primary transition-colors hover:text-white'>
                 <a href="/files/Resume_PetarK.pdf" download className='flex gap-3'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
@@ -10,9 +11,7 @@ function TopRowSection() {
                     Download My CV
                 </a>
             </button>
-
-        </div>
-    )
+        </div>)
 }
 
-export default TopRowSection
+export default DownloadButton

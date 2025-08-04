@@ -4,12 +4,10 @@ import ExperienceSection from "../components/layout/ExperienceSectionc";
 import HeroSection from "../components/layout/HeroSection";
 import ProjectsSection from "../components/layout/ProjectsSection";
 import SkillsSection from "../components/layout/SkillsSection";
-import TopRowSection from "../components/layout/TopRowSection";
 
 function MainSection() {
     return (
         <div className="flex align-middle justify-center h-max pt-8 flex-col">
-            <TopRowSection />
             <HeroSection />
             <AboutSection />
             <SkillsSection />
