@@ -99,14 +99,14 @@ function ProjectsSection() {
                             <h2 className="font-bold text-2xl xs:p-2">
                                 {proj.title}
                             </h2>
-                            <div className="flex gap-2 flex-wrap mb-auto xs:p-2">
+                            <div className="flex gap-2 justify-center flex-wrap mb-auto xs:p-2 px-2">
                                 {proj.technologies.map((t) => (
                                     <span className="font-semibold px-2 py-1 bg-primary rounded-lg text-sm text-white">
                                         {t}
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-md font-normal py-2 xs:p-2">
+                            <p className="text-md font-normal py-2 xs:p-2 px-2">
                                 {proj.description}
                             </p>
                         </a>

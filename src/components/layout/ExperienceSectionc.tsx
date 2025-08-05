@@ -48,7 +48,7 @@ function ExperienceSection() {
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work  lg:text-text"
-                            date="July 2023 - January 2024"
+                            date="July 2023 - August 2025"
                             contentStyle={{ background: 'hsl(0, 0%, 0%, 0)', boxShadow: 'none' }}
                             contentArrowStyle={{ display: 'none' }}
                             iconStyle={{ overflow: 'hidden', borderColor: 'var(--color-text)', backgroundColor: '#fff' }}
