@@ -2,10 +2,13 @@ import { useRef } from "react";
 import { useIsVisible } from "../../hooks/UseIsVisible";
 import 'react-vertical-timeline-component/style.min.css';
 import { useTheme } from "../../context/ThemeContext";
-import placeholder from "../../assets/images/placeholder_code.jpg"
 import nadjiPlaceholder from "../../assets/images/Nadji.rs.png"
 import zenithPlaceholder from "../../assets/images/zenthchat.png"
 import socialPhysicsPlaceholder from "../../assets/images/socialphysics.png"
+import redditClonePlaceholder from "../../assets/images/redditclone.png"
+import twitterClonePlaceholder from "../../assets/images/twitterclone.jpg"
+import eupravaPlaceholder from "../../assets/images/euprava.png"
+
 
 
 
@@ -20,42 +23,42 @@ const projects: Project[] = [
     {
         title: "ZenithChat",
         cover: zenithPlaceholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description: "ZenithChat is a smart Instagram chatbot designed to handle customer messages automatically. It connects to the Meta API to understand your page’s posts, stories, and DMs, and replies to messages based on that content. You can also feed it extra info from your website, files, or other sources, making it super flexible. With a custom-built knowledge base and always-on support, it’s like having a personal assistant in your Instagram inbox 24/7.",
         link: "https://www.linkedin.com/company/zenith-chat",
         technologies: ["Python", "JavaScript", "OpenAI", "GraphAPI", "Redis", "Pinecone", "PostgreSQL", "Django", "React", "Celery", "Tailwind"]
     },
     {
         title: "Nadji.rs",
         cover: nadjiPlaceholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description: "Nadji.rs is a real estate search platform that gathers listings from all major real estate websites in Serbia, bringing them together in one place for easy browsing. It automatically scans and updates listings, making sure users always see the latest offers. One of its key features is smart duplicate detection: if the same property is listed by different agencies or on different sites, Nadji.rs groups them together so users don’t have to scroll through repeats.",
         link: "https://nadji.in.rs/",
         technologies: ["C#", ".NET", "JavaScript", "React", "HTML", "CSS", "Bootstrap", "Web Scraping"]
     },
     {
         title: "SocialPhysics",
         cover: socialPhysicsPlaceholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description: "SocialDynamicsAI is a multimodal AI system that analyzes real-time meeting behavior to uncover hidden patterns of power, influence, and engagement. Built with a custom rule engine and advanced video/audio processing, it tracks gaze, posture, tone, and speech to classify participant roles and generate live insights. I contributed to its design and behavioral logic, helping teams decode unspoken dynamics and improve collaboration instantly.",
         link: "https://socialphysics.co",
         technologies: ["Python", "JavaScript", "OpenAI", "WhisperAI", "AssemblyAI", "HuggingFace", "Tailwind", "Bash"]
     },
     {
         title: "TwitterClone",
-        cover: placeholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        cover: twitterClonePlaceholder,
+        description: "As part of a college team project, we built a social media platform for short posts, similar to Twitter, using a microservices architecture and various NoSQL databases. The system supports user registration (regular and business accounts), posting, liking, retweeting, and following other users, along with targeted ad posting and performance tracking for business users. We implemented modern backend concepts like event sourcing, CQRS, API gateways, Redis caching, Docker containerization, and Jaeger tracing, while also focusing on security through validation, RBAC, and secure communication. It was a great hands-on experience in building a scalable and secure distributed system from the ground up.",
         link: "https://github.com/orgs/OSSIT-Tim1/repositories",
-        technologies: ["GO", "JavaScript", "Docker", "Microservices", "Nginx", "Nats", "MongoDB", "Redis", "Cassandra", "Neo4j", "Jeager", "React", "Tailwind"]
+        technologies: ["GO", "JavaScript", "Docker", "Microservices", "Nginx", "Nats", "MongoDB", "Redis", "Cassandra", "Neo4j", "Jaeger", "React", "Tailwind"]
     },
     {
         title: "RedditClone",
-        cover: placeholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        cover: redditClonePlaceholder,
+        description: "RedditClone is a solo-built social platform inspired by Reddit, featuring user authentication, multiple roles (User, Moderator, Admin), and full community management. Users can create and edit communities, make rich posts with text, images, and PDFs, add flairs, and engage through threaded comments with unlimited replies. The app includes features like post/comment reactions, reporting, and advanced moderation tools such as banning users or suspending communities. It also has a powerful yet easy-to-use search, letting users find posts and communities using filters, keywords, and flexible search options.",
         link: "https://github.com/PetarK37/RedditCloneSpring",
         technologies: ["Java", "SpringBoot", "TypeScript", "Angular", "HTML", "CSS", "MySQL", "ElasticSearch"]
     },
     {
         title: "E-uprava",
-        cover: placeholder,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        cover: eupravaPlaceholder,
+        description: "PolicePlatform is a demo microservice built as part of a student e-government project, where I was responsible for the entire police module. It allows officers to log in, verify people and vehicles, issue reports with attachments, generate PDFs, and forward cases to the court service. The app features role-based access, simple data validation, and integration with the court and vehicle registration services developed by teammates.",
         link: "https://github.com/orgs/EUPRAVA-TIM1/repositories",
         technologies: ["GO", "JavaScript", "Docker", "Microservices", "MySQL", "Redis", "React", "Bootstrap"]
     },
@@ -88,9 +91,11 @@ function ProjectsSection() {
                             href={proj.link || "#projects"}
                             target={proj.link ? "_blank" : "_self"}
                             rel="noopener noreferrer"
-                            className={`mb-2 sm:w-[49%] xs:w-[100%] mx-auto ${theme === 'dark' ? 'bg-white' : 'bg-black'} } rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 sm:p-5 flex flex-col gap-4`}
+                            className={`transition-transform duration-300 ease-in-out transform hover:-translate-y-1 mb-2 sm:w-[49%] xs:w-[100%] mx-auto ${theme === 'dark' ? 'bg-white' : 'bg-black'} } rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 sm:p-5 flex flex-col gap-4`}
                         >
-                            <img src={proj.cover} className="rounded-md" />
+                            <div className="aspect-[1024/768] flex justify-center align-middle h-max">
+                                <img src={proj.cover} className="rounded-md" />
+                            </div>
                             <h2 className="font-bold text-2xl xs:p-2">
                                 {proj.title}
                             </h2>
