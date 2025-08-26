@@ -45,11 +45,11 @@ function AboutSection() {
                             is another favorite activity of mine. <strong>Fun fact:</strong> I once
                             reserved so many movies on an movie theatre app that my account
                             got flagged! Recently, I’ve started learning{" "}
-                            <strong>electric guitar and German</strong>—let’s see how those two go :)
+                            <strong>electric guitar and German</strong> so let’s see how those two go :)
                         </p>
                         <p className="mt-4 text-left text-lg w-full font-semibold text-text_secondary lg:max-w-[80%]">
                             I’d love to collaborate, share ideas, or just chat about tech and
-                            hobbies—feel free to reach out!
+                            hobbies feel free to reach out!
                         </p>
                     </div>
                     <div
