@@ -8,6 +8,7 @@ import socialPhysicsPlaceholder from "../../assets/images/socialphysics.png"
 import redditClonePlaceholder from "../../assets/images/redditclone.png"
 import twitterClonePlaceholder from "../../assets/images/twitterclone.jpg"
 import eupravaPlaceholder from "../../assets/images/euprava.png"
+import storeadminPlaceholder from "../../assets/images/sotreadmin.png"
 
 
 
@@ -56,13 +57,12 @@ const projects: Project[] = [
         technologies: ["Java", "SpringBoot", "TypeScript", "Angular", "HTML", "CSS", "MySQL", "ElasticSearch"]
     },
     {
-        title: "E-uprava",
-        cover: eupravaPlaceholder,
-        description: "PolicePlatform is a demo microservice built as part of a student e-government project, where I was responsible for the entire police module. It allows officers to log in, verify people and vehicles, issue reports with attachments, generate PDFs, and forward cases to the court service. The app features role-based access, simple data validation, and integration with the court and vehicle registration services developed by teammates.",
-        link: "https://github.com/orgs/EUPRAVA-TIM1/repositories",
-        technologies: ["GO", "JavaScript", "Docker", "Microservices", "MySQL", "Redis", "React", "Bootstrap"]
-    },
-
+        title: "Store Admin",
+        cover: storeadminPlaceholder,
+        description: "Store Admin is a full-stack web application for managing inventory and customer orders, designed for online shops operating through Instagram, Facebook, and similar networks. Built with .NET Core, React, Material-UI, and MS SQL, it provides an admin panel where store owners can manage products, categories, employees, and promo codes. Key features include inventory and sales analytics, customer order tracking with automated emails and shipping labels, supplier order reminders, and role-based access control, making it a comprehensive solution for social commerce management.",
+        link: "https://github.com/PetarK37/OnlineStoreManagment",
+        technologies: [".NET", "JavaScript", "React", "MsSQLServer", "React", "Material-UI", "MailKit"]
+    }
 ]
 
 function ProjectsSection() {
