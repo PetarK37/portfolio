@@ -20,7 +20,7 @@ interface Job {
 const jobs: Job[] = [
     {
         title: "Tubeiq",
-        dateStr: "October 205 - Today",
+        dateStr: "October 2025 - Today",
         desc: "Part of a .NET development team in a Tubeiq (member of an Egzakta group)",
         icon: <img src={tubeiqLogo} style={{ objectFit: 'cover', height: '100%' }} />,
         position: 'left',
