@@ -11,16 +11,11 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.7.1",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.7.1",
     "framer-motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scroll": "^1.9.0",
-    "react-tooltip": "^5.28.0",
-    "react-type-animation": "^3.2.0",
-    "react-vertical-timeline-component": "^3.5.3"
+    "react-tooltip": "^5.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -28,7 +23,6 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-scroll": "^1.8.10",
-    "@types/react-vertical-timeline-component": "^3.3.6",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",

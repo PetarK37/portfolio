@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"developer portfolio tech startup modern sleek professional fun\" --design-system -p \"Petar K Portfolio\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"developer portfolio tech startup modern sleek professional fun\" --design-system -p \"Petar K Portfolio\")",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"developer portfolio startup\" --domain style -n 5)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"developer portfolio startup\" --domain style -n 5)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"animation accessibility performance\" --domain ux -n 10)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"animation accessibility performance\" --domain ux -n 10)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"layout responsive form\" --stack react)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"layout responsive form\" --stack react)",
+      "Bash(npx tsc:*)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}

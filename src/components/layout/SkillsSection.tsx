@@ -1,43 +1,67 @@
-import { useRef } from "react";
-import { useIsVisible } from "../../hooks/UseIsVisible";
-import { SKILLS } from "../../utils/constants";
-import { shuffleArray } from "../../utils/helper";
-import { Tooltip } from "react-tooltip";
+import { motion } from "framer-motion";
+import { SKILLS, SKILL_CATEGORIES } from "../../utils/constants";
+import SectionHeading from "../ui/SectionHeading";
+import SpotlightCard from "../ui/SpotlightCard";
+import { fadeUp, staggerContainer } from "../../utils/motion";
+
+// Map categories to grid spans for asymmetric bento layout
+const categorySpans: Record<string, string> = {
+  Languages: "md:col-span-2 md:row-span-2",
+  Frontend: "md:col-span-1",
+  Backend: "md:col-span-1",
+  Databases: "md:col-span-1",
+  "Tools & APIs": "md:col-span-2",
+};
 
 function SkillsSection() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useIsVisible(ref);
-    return (
-        <section
-            className="flex items-stretch gap-4 justify-start lg:px-16 px-8 py-11 max-h-full max-w-[1200px]"
-            id="skills"
-        >
-            <div
-                className={`flex gap-10 flex-col w-full align-middle items-center py-1 transition-opacity ease-in duration-300 ${isVisible ? "opacity-100" : "opacity-0"
-                    }`}
-                ref={ref}
+  return (
+    <section
+      className="px-6 md:px-12 lg:px-16 py-32 lg:py-40 max-w-content w-full"
+      id="skills"
+    >
+      <SectionHeading
+        title="Skills"
+        subtitle="Technologies I've worked with the most."
+      />
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        variants={staggerContainer(0.1)}
+      >
+        {SKILL_CATEGORIES.map((category) => {
+          const skills = SKILLS.filter((s) => s.category === category);
+          return (
+            <motion.div
+              key={category}
+              className={categorySpans[category] || ""}
+              variants={fadeUp}
             >
-                <div>
-                    <h2 className="h-fit text-center text-4xl font-bold">My skills</h2>
-                    <p className="mt-2 text-lg w-full font-semibold text-text_secondary">
-                        Here is the list of technologies i've worked with the most
-                    </p>
+              <SpotlightCard className="p-6 lg:p-8 h-full">
+                <h3 className="text-xs font-mono uppercase tracking-widest text-accent mb-5">
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.map((s) => (
+                    <motion.div
+                      key={s.id}
+                      className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-background/50 transition-all duration-300 ease-out-expo"
+                      whileHover={{ y: -2 }}
+                    >
+                      {s.icon}
+                      <span className="text-sm font-medium">{s.name}</span>
+                    </motion.div>
+                  ))}
                 </div>
-                <div className="flex gap-3 align-middle justify-center flex-wrap mx-auto">
-                    {shuffleArray(SKILLS).map((s) => (
-                        <div
-                            className={`flex flex-col justify-center align-middle`}
-                            id={s.id}
-                            key={s.id}
-                        >
-                            {s.icon}
-                            <Tooltip anchorSelect={`#${s.id}`} content={s.name} />
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+              </SpotlightCard>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </section>
+  );
 }
 
 export default SkillsSection;
