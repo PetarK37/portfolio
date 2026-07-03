@@ -24,7 +24,7 @@ const jobs: Job[] = [
     dateStr: "Oct 2025 -- Present",
     desc: "Part of a .NET development team in Tubeiq (member of the Egzakta group).",
     icon: <img src={tubeiqLogo} className="w-full h-full object-cover" alt="Tubeiq" />,
-    role: "Junior Software Engineer",
+    role: "Software Engineer",
     current: true,
   },
   {
